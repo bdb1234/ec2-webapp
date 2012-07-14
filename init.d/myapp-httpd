@@ -22,8 +22,8 @@ DESC="myvacation HTTP server"
 RUNDIR=/var/run/myvacation
 LOGDIR=/var/log/myvacation
 SCRIPTNAME=/etc/init.d/$NAME
-USER=www-data
-GROUP=www-data
+USER=root
+GROUP=root
 #RELOAD_SIGNAL=1
 
 # Node.js
