@@ -1,34 +1,34 @@
 #!/bin/sh
 ### BEGIN INIT INFO
-# Provides:          myapp-httpd
+# Provides:          myvacation-httpd
 # Required-Start:    $remote_fs
 # Required-Stop:     $remote_fs
 # Default-Start:     2 3 4 5
 # Default-Stop:      0 1 6
-# Short-Description: myapp HTTP server
-# Description:       myapp HTTP server
+# Short-Description: myvacation HTTP server
+# Description:       myvacation HTTP server
 ### END INIT INFO
 #
 # Installation:
 #   1. Put a copy of or make a symlink to this script in /etc/init.d
-#   2. update-rc.d myapp-httpd defaults
+#   2. update-rc.d myvacation-httpd defaults
 #
 # Do NOT "set -e"
 
 # PATH should only include /usr/* if it runs after the mountnfs.sh script
 PATH=/sbin:/usr/sbin:/bin:/usr/bin:/usr/local/bin
-NAME=myapp-httpd
-DESC="myapp HTTP server"
-RUNDIR=/var/run/myapp
-LOGDIR=/var/log/myapp
+NAME=myvacation-httpd
+DESC="myvacation HTTP server"
+RUNDIR=/var/run/myvacation
+LOGDIR=/var/log/myvacation
 SCRIPTNAME=/etc/init.d/$NAME
 USER=www-data
 GROUP=www-data
 #RELOAD_SIGNAL=1
 
 # Node.js
-MOVE_PROGRAM=/usr/local/bin/move
-MOVE_SCRIPT=/var/myapp/bin/myapp-httpd.mv
+MOVE_PROGRAM=/usr/local/bin/node
+MOVE_SCRIPT=/var/myvacation/bin/app.js
 MOVE_ARGS="$MOVE_PROGRAM"
 
 # Daemon supervisor config
