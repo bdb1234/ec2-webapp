@@ -16,11 +16,11 @@ if [ "$(whoami)" != "root" ]; then
   exit $?
 fi
 cd "$(dirname "$0")"
-sudo -Hu www-data git pull origin master || exit $?
+sudo git pull origin master || exit $?
 if [ "$2" != "" ]; then
-  sudo -Hu www-data git checkout "$2" || exit $?
+  sudo git checkout "$2" || exit $?
 fi
-sudo -Hu www-data git submodule update --init
+sudo git submodule update --init
 
 if [ "$1" == "restart" ]; then
   [ -f /etc/init.d/myapp-httpd ] && invoke-rc.d myapp-httpd restart
