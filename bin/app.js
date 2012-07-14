@@ -7,7 +7,7 @@ app.configure(function() {
 });
 
 app.get('/', function(req, res){
-  res.send('hello worldsssss');
+  res.send('hey shivaaaa');
 });
 
 app.listen(80);
